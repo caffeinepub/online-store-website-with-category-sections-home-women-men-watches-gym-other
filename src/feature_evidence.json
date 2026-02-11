@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-storefront-branding-to-display-the-site-name-luxury-bazar-in-the-persistent-header-next-to-the-existing-logo-image-on-all-pages",
+      "featureTitle": "Update the storefront branding to display the site name \"Luxury Bazar\" in the persistent header (next to the existing logo image) on all pages.",
+      "files": [
+        "frontend/src/components/nav/StoreHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-html-document-title-to-luxury-bazar-so-the-browser-tab-displays-the-correct-site-name",
+      "featureTitle": "Update the HTML document title to \"Luxury Bazar\" so the browser tab displays the correct site name.",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-footer-copyright-text-to-include-the-site-name-luxury-bazar",
+      "featureTitle": "Update footer copyright text to include the site name \"Luxury Bazar\".",
+      "files": [
+        "frontend/src/components/layout/StoreFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T08:28:16.164Z",
+  "summary": "REQ-12/13/14 appear implemented: header now displays \"Luxury Bazar\" next to the logo as a single home link, document <title> is set to \"Luxury Bazar\", and footer copyright includes \"© {currentYear} Luxury Bazar. All rights reserved.\". One additional behavior (dynamic hostname-based UTM content for the caffeine.ai link) appears introduced but was not requested.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Dynamic UTM tracking parameter (utm_content) derived from window.location.hostname added to the caffeine.ai referral link.",
+      "reason": "REQ-14 only asked to keep the existing caffeine.ai referral link unchanged; adding hostname-based UTM content is additional behavior not explicitly requested.",
+      "evidence": [
+        "frontend/src/components/layout/StoreFooter.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.68,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/index.html",
+    "frontend/src/components/layout/StoreFooter.tsx",
+    "frontend/src/components/nav/StoreHeader.tsx",
+    "project_state.json"
+  ]
+}

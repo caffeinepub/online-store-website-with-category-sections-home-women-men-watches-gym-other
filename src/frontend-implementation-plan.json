@@ -1,0 +1,53 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add “Luxury Bazar” branding text and document title",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Show the site name “Luxury Bazar” next to the logo in the persistent header on all pages while keeping the branding as a single home link.",
+      "acceptanceCriteria": [
+        "Header shows the text \"Luxury Bazar\" next to the logo on both desktop and mobile widths.",
+        "The header branding remains a single link to the home route (\"/\").",
+        "No navigation links are removed or renamed as part of this change."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/nav/StoreHeader.tsx",
+          "operation": "modify",
+          "description": "Update the header brand area to render the text “Luxury Bazar” next to the existing logo image within the same Link to \"/\". Ensure the layout remains responsive for both desktop and mobile widths, and keep all existing navigation links unchanged."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Set the HTML document title to “Luxury Bazar”.",
+      "acceptanceCriteria": [
+        "frontend/index.html <title> is \"Luxury Bazar\".",
+        "After reload, the browser tab title displays \"Luxury Bazar\"."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Replace the existing <title> text with exactly \"Luxury Bazar\" so the browser tab reflects the correct site name after reload."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Include the site name “Luxury Bazar” in the footer copyright line while keeping existing footer links unchanged.",
+      "acceptanceCriteria": [
+        "Footer displays: \"© {currentYear} Luxury Bazar. All rights reserved.\" (with the current year).",
+        "Other existing footer links and the caffeine.ai referral link remain unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/StoreFooter.tsx",
+          "operation": "modify",
+          "description": "Update the copyright paragraph to render \"© {currentYear} Luxury Bazar. All rights reserved.\" using the existing currentYear value, and ensure all other footer links (including the caffeine.ai referral link) remain unchanged."
+        }
+      ]
+    }
+  ]
+}

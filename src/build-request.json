@@ -1,0 +1,72 @@
+{
+  "kind": "build_request",
+  "title": "Add site name “Luxury Bazar” to storefront branding",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Update the storefront branding to display the site name \"Luxury Bazar\" in the persistent header (next to the existing logo image) on all pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "add the web site name  luxury bazar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header shows the text \"Luxury Bazar\" next to the logo on both desktop and mobile widths.",
+        "The header branding remains a single link to the home route (\"/\").",
+        "No navigation links are removed or renamed as part of this change."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Update the HTML document title to \"Luxury Bazar\" so the browser tab displays the correct site name.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "add the web site name  luxury bazar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/index.html <title> is \"Luxury Bazar\".",
+        "After reload, the browser tab title displays \"Luxury Bazar\"."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Update footer copyright text to include the site name \"Luxury Bazar\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "add the web site name  luxury bazar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer displays: \"© {currentYear} Luxury Bazar. All rights reserved.\" (with the current year).",
+        "Other existing footer links and the caffeine.ai referral link remain unchanged."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (shadcn components).",
+    "Do not edit immutable hook/entry files listed in SYSTEM_CONTEXT (e.g., frontend/src/main.tsx, frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts)."
+  ],
+  "nonGoals": [
+    "Creating or changing the logo image asset.",
+    "Changing product/catalog behavior or backend APIs.",
+    "Adding new pages or routes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
